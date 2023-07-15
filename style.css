@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+}
+.sky{
+    background-color: #81bdf9;
+    height: 40vh;
+}
+.grass{
+    background-color: #26a555;
+    height: 17vh;
+}
+.road{
+    background-color: gray;
+    height: 40vh;
+    border-top: 10px solid rgb(177,176,176);
+    border-bottom: 10px solid rgb(177,176,176);
+}
+.line{
+    border-bottom: 10px dashed #fff;
+    transform: translateY(22vh);
+}
+#mario {
+    animation-name: drive;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#mario:hover{
+    animation-play-state: paused;
+}
+@keyframes drive{
+    0%{
+        transform: translate(0);
+    }
+    45%{
+        transform: translateX(90vw);
+    }
+    50%{
+        transform: translate(90vw,20vh) 
+        scaleX(-1);
+    }
+    95%{
+        transform: translate(0, 20vh)
+        scaleX(-1);
+    }
+    100%{
+        transform: translate(0);
+    }
+}
+#cloud{
+    width: 250px;
+    animation: cloud 100s infinite alternate;
+}
+@keyframes cloud{
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(80vw,0);
+    }
+}
